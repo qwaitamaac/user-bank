@@ -27,27 +27,33 @@ public class UserBankController {
 
     @PostMapping(value = "/user")
     public @ResponseBody String createUser(@RequestBody UserDTO user){
-        return userBankService.createUser(user);
+        userBankService.createUser(user);
+        return "Ok";
     }
     @PutMapping(value = "/user")
     public @ResponseBody String updateUser(@RequestBody UserDTO user){
-        return userBankService.updateUser(user);
+        userBankService.updateUser(user);
+        return "Ok";
     }
 
     @PostMapping(value = "/bank")
     public @ResponseBody String createBank(@RequestBody BankDTO bank){
-        return userBankService.createBank(bank);
+        userBankService.createBank(bank);
+        return "Ok";
     }
     @PutMapping(value = "/bank")
     public @ResponseBody String updateBank(@RequestBody BankDTO bank){
-        return  userBankService.updateBank(bank);
+        userBankService.updateBank(bank);
+        return "Ok";
     }
     @DeleteMapping(value = "/user/{id}")
     public  @ResponseBody String deleteUser(@PathVariable(value = "id") Long id){
-        return userBankService.deleteUser(id);
+        userBankService.deleteUser(id);
+        return "Ok";
     }
     @DeleteMapping(value = "/bank/{id}")
     public @ResponseBody String deleteBank(@PathVariable(value = "id") Long id){
-        return userBankService.deleteBank(id);
+        userBankService.deleteBank(id);
+        return "Ok";
     }
 }

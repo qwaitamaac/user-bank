@@ -9,12 +9,12 @@ import java.util.List;
 
 public interface UserBankService {
     public List<UserDTO> getUsers();
-    public String createUser(UserDTO userDTO);
-    public String updateUser(UserDTO userDTO);
-    public String deleteUser(Long id);
+    public void createUser(UserDTO userDTO);
+    public void updateUser(UserDTO userDTO);
+    public void deleteUser(Long id);
 
     public List<BankDTO> getBanks();
-    public String createBank(BankDTO bankDTO);
-    public String updateBank(BankDTO bankDTO);
-    public String deleteBank(Long id);
+    public void createBank(BankDTO bankDTO);
+    public void updateBank(BankDTO bankDTO);
+    public void deleteBank(Long id);
 }
